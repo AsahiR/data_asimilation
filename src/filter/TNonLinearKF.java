@@ -225,11 +225,11 @@ public abstract class TNonLinearKF extends TKalmanFilter {
 		}
 		if (isQ2) {
 			key2 = "XiQ";
-			m2Tmp = fTmp.get("1Q")[0].copyFrom(m2).times(-1.0);
+			m2Tmp = fTmp.get("1Q")[0].tcopyFrom(m2).times(-1.0);
 		}
 		else {
 			key2 = "XiR";
-			m2Tmp = fTmp.get("1R")[0].copyFrom(m2).times(-1.0);
+			m2Tmp = fTmp.get("1R")[0].tcopyFrom(m2).times(-1.0);
 		}
 		TCMatrix delta1 = fTmp.get(key1)[0];
 		TCMatrix tmpDst = fTmp.get(key1)[1];
