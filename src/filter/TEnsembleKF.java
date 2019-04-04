@@ -84,7 +84,7 @@ public class TEnsembleKF extends TNonLinearKF {
 		fWNoise.fill(0.0);
 		// シグマポイントのノイズを計算
 		addNoise(fWNoise, fR, null);
-		TCMatrix m = fTmp.get("RR")[0];
+		TCMatrix m = fTmp.get("R1")[0];
 		m.fill(0.0);
 		// fRHatを計算
 		calcCovByXi(false, fWNoise, m, false, fWNoise, m, fRHat);

@@ -313,7 +313,7 @@ public class TKalmanFilter {
 	public void calcXByK(TCMatrix z) {
 		// 観測残渣
 		fHError.sub(z, fPredictZ);
-		TCMatrix tmp[] = fTmp.get("QR");
+		TCMatrix tmp[] = fTmp.get("Q1");
 		fFilterX.add(fPredictX, tmp[0].times(fK, fHError));
 	}
 
